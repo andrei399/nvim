@@ -1,6 +1,6 @@
 return {
     "steelsojka/pears.nvim",
-    event = "VeryLazy",
+    event = { "BufRead", "BufNewFile"},
     config = function()
         require("pears").setup()
     end
