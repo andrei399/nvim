@@ -34,3 +34,15 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/andrei/<CR>")
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+
+vim.keymap.set(
+    "n",
+    "<leader>ll",
+    function()
+        if tonumber(vim.opt.colorcolumn:get()[1]) == 80 then
+            vim.api.nvim_set_option_value("colorcolumn", "120", {})
+        else
+            vim.api.nvim_set_option_value("colorcolumn", "80", {})
+        end
+    end
+)

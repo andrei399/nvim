@@ -2,6 +2,7 @@ return {
     "mfussenegger/nvim-dap",
     dependencies = {
         "jay-babu/mason-nvim-dap.nvim",
+        "theHamsta/nvim-dap-virtual-text",
     },
     event = "VeryLazy",
     config = function()
@@ -14,5 +15,16 @@ return {
 
         vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint)
         vim.keymap.set("n", "<leader>dc", dap.continue)
-    end
+    end,
+    keys = {{
+        "<F5>",
+        function()
+            -- (Re-)reads launch.json if present
+            if vim.fn.filereadable(".vscode/launch.json") then
+                require("dap.ext.vscode").load_launchjs()
+            end
+            require("dap").continue()
+        end,
+        desc = "DAP Continue",
+    }},
 }

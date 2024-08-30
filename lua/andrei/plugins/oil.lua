@@ -10,7 +10,7 @@ return {
                 ["<C-s>"] = "actions.select_vsplit",
                 ["<C-n>"] = "actions.select_split", -- edited
                 ["<C-t>"] = "actions.select_tab",
-                ["<C-p>"] = "actions.preview",
+                ["<leader>p"] = "actions.preview",
                 ["<C-c>"] = "actions.close",
                 ["<C-r>"] = "actions.refresh", -- edited
                 ["-"] = "actions.parent",

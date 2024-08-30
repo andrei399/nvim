@@ -2,9 +2,6 @@ return {
     -- Libraries
     "nvim-lua/plenary.nvim",
 
-    -- Navigators
-    "christoomey/vim-tmux-navigator",
-
     -- Code productivity
     "tpope/vim-repeat",
     "ggandor/lightspeed.nvim",

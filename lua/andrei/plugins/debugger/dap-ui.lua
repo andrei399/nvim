@@ -10,16 +10,16 @@ return {
         dap_ui.setup({})
 
         dap.listeners.before.attach.dapui_config = function()
-            dapui.open()
+            dap_ui.open()
         end
         dap.listeners.before.launch.dapui_config = function()
-            dapui.open()
+            dap_ui.open()
         end
         dap.listeners.before.event_terminated.dapui_config = function()
-            dapui.close()
+            dap_ui.close()
         end
         dap.listeners.before.event_exited.dapui_config = function()
-            dapui.close()
+            dap_ui.close()
         end
     end
 }

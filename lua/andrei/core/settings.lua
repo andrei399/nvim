@@ -34,7 +34,7 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "120"
 
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
@@ -42,3 +42,4 @@ vim.g.netrw_winsize = 25
 
 vim.g.python3_host_prog = "/usr/bin/python3.11"
 vim.g.node_host_prog = "/home/andrei399/.nvm/versions/node/v19.2.0/bin/node"
+vim.opt.shell = "/bin/bash"
